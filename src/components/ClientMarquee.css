@@ -1,0 +1,53 @@
+/* ===== CLIENT MARQUEE ===== */
+.marquee-section {
+  padding: 3rem 0;
+  border-top: 1px solid #E8EFF5;
+  border-bottom: 1px solid #E8EFF5;
+  background: var(--gray-light);
+  overflow: hidden;
+}
+
+.marquee-label {
+  text-align: center;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9BA8B5;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.marquee-outer {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 3rem;
+  border-right: 1px solid #D8E6F0;
+  min-width: 160px;
+}
+
+.marquee-item span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #8AAFC8;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: color 0.25s;
+}
+
+.marquee-item:hover span {
+  color: var(--ocean);
+}
