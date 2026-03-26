@@ -1,26 +1,30 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import heroShip from '../assets/hero_ship.jpg';
 import './Hero.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: '12,000+', label: 'Shipments Handled' },
+  { value: '6000+', label: 'Shipments Handled' },
   { value: '180+', label: 'Ports Covered' },
   { value: '25+', label: 'Years of Experience' },
-  { value: '60+', label: 'Countries Served' },
+  { value: '150+', label: 'Countries Covered' },
 ];
-
 const Hero = () => {
+  const leftRef = useRef(null);
   const headlineRef = useRef(null);
   const subRef = useRef(null);
   const ctaRef = useRef(null);
   const statsRef = useRef(null);
   const scrollHintRef = useRef(null);
   const bgRef = useRef(null);
+
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useEffect(() => {
     // Entrance animation timeline
@@ -61,24 +65,34 @@ const Hero = () => {
       <div className="hero-bg-overlay" />
 
       <div className="container hero-content">
-        <div className="hero-badge">🌊 Trusted Global Maritime Partner</div>
-        <h1 ref={headlineRef} className="hero-headline">
-          Global Maritime Logistics <br />
-          <span className="hero-accent">Simplified.</span>
-        </h1>
-        <p ref={subRef} className="hero-sub">
-          From port handling to customs clearance, we deliver end-to-end maritime
-          logistics solutions for businesses operating across 180+ ports worldwide.
-        </p>
-        <div ref={ctaRef} className="hero-cta">
-          <button className="btn btn-hero-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-            Get a Quote  
-          </button>
-          <button className="btn btn-hero-outline" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-            Explore Services
-          </button>
+        {/* LEFT: Text Content */}
+        <div className="hero-left" ref={leftRef}>
+          {/* <div className="hero-badge">🌍 Integrated Global Logistics Partner</div> */}
+
+          <h1 ref={headlineRef} className="hero-headline">
+            Powering India’s <br />
+            <span className="hero-accent">Global Trade</span>
+          </h1>
+
+          <p ref={subRef} className="hero-sub">
+            From port handling to customs clearance, OceanMarque delivers end-to-end 
+            maritime logistics solutions across India’s major and minor ports—ensuring 
+            seamless, compliant, and efficient EXIM cargo movement across global trade lanes.
+          </p>
+          <div ref={ctaRef} className="hero-cta">
+            <button className="btn btn-hero-primary" onClick={scrollToContact}>
+              Contact Us
+            </button>
+            <button
+              className="btn btn-hero-outline"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Explore Services
+            </button>
+          </div>
         </div>
 
+        {/* RIGHT: Stats */}
         <div ref={statsRef} className="hero-stats">
           {stats.map((stat, i) => (
             <div key={i} className="stat-card">

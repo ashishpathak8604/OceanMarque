@@ -1,0 +1,56 @@
+.gallery-section {
+  padding: 8rem 0;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.gallery-marquee-container {
+  margin-top: 4rem;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.gallery-marquee {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+}
+
+.gallery-item {
+  width: 400px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Since we doubled the array, we scroll half of the total width */
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 300px;
+    height: 200px;
+  }
+}

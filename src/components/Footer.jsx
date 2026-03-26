@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor, Linkedin, Twitter, Facebook, Mail } from 'lucide-react';
+import { Anchor, Linkedin, Twitter, Facebook, Mail, MapPin, Phone } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => (
@@ -11,7 +11,7 @@ const Footer = () => (
           <span>OceanMarque</span>
         </div>
         <p className="footer-tagline">
-          Global Maritime Logistics Simplified. Trusted by the world's leading shippers across 60+ countries.
+          Global Maritime Logistics Simplified. Trusted by leading shippers across 150+ countries with 25+ years of unmatched expertise.
         </p>
         <div className="footer-socials">
           <a href="#" aria-label="LinkedIn"><Linkedin size={18} /></a>
@@ -24,22 +24,11 @@ const Footer = () => (
       <div className="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Port & Terminal Handling</a></li>
+          <li><a href="#services">Port &amp; Terminal Handling</a></li>
           <li><a href="#services">Port Agency Services</a></li>
           <li><a href="#services">Freight Forwarding</a></li>
           <li><a href="#services">Customs Clearance</a></li>
-          <li><a href="#services">Chartering & Broking</a></li>
-        </ul>
-      </div>
-
-      <div className="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#network">Global Network</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#contact">Careers</a></li>
-          <li><a href="#contact">Press</a></li>
+          <li><a href="#services">Chartering &amp; Broking</a></li>
         </ul>
       </div>
 
@@ -49,16 +38,34 @@ const Footer = () => (
           <li>Chennai, India</li>
           <li>Mumbai, India</li>
           <li>New Delhi, India</li>
-          <li>Singapore</li>
+          <li>Bengaluru, India</li>
+          <li>Hyderabad, India</li>
           <li>Dubai, UAE</li>
-          <li>Rotterdam, Netherlands</li>
+        </ul>
+      </div>
+
+      <div className="footer-col">
+        <h4>Contact</h4>
+        <ul className="contact-list">
+          <li>
+            <MapPin size={14} className="footer-contact-icon" />
+            <span>Old 20 / New 29, Second Floor, First Street, Parameshwari Nagar, Adyar, Chennai 600020, India</span>
+          </li>
+          <li>
+            <Phone size={14} className="footer-contact-icon" />
+            <span>+91 739 729 7771</span>
+          </li>
+          <li>
+            <Mail size={14} className="footer-contact-icon" />
+            <span>commercial@oceanmarque.com</span>
+          </li>
         </ul>
       </div>
     </div>
 
     <div className="footer-bottom">
       <div className="container footer-bottom-inner">
-        <span>© 2024 OceanMarque. All rights reserved.</span>
+        <span>© 2025 OceanMarque. All rights reserved.</span>
         <div className="footer-legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>

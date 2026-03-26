@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, MapPin, Mail, Phone } from 'lucide-react';
+import portAerial from '../assets/port_aerial.jpg';
 import './ContactForm.css';
 
 const services = [
@@ -43,28 +44,52 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="contact-section">
+      {/* Background image with overlay */}
+      <div className="contact-bg" style={{ backgroundImage: `url(${portAerial})` }} />
+      <div className="contact-bg-overlay" />
+
       <div className="container contact-inner">
         <div className="contact-info">
           <span className="section-tag">Get in Touch</span>
           <h2 className="section-title" style={{ color: '#fff' }}>Request a Quote</h2>
           <p className="section-sub" style={{ color: 'rgba(255,255,255,0.75)' }}>
-            Tell us about your shipment and we'll get back with a tailored solution within 24 hours.
+            Ready to simplify your maritime logistics? Reach out to us and our team 
+            will respond with a tailored solution for your requirements.
           </p>
           <div className="contact-details">
             <div className="contact-detail">
-              <strong>Headquarters</strong>
-              <span>Chennai, Tamil Nadu, India</span>
+              <MapPin size={16} className="contact-detail-icon" />
+              <div>
+                <strong>Registered Office</strong>
+                <span>Old 20 / New 29, Second Floor, First Street,<br />Parameshwari Nagar, Adyar, Chennai – 600 020</span>
+              </div>
             </div>
             <div className="contact-detail">
-              <strong>Email</strong>
-              <span>operations@oceanmarque.com</span>
+              <Mail size={16} className="contact-detail-icon" />
+              <div>
+                <strong>Business Enquiries</strong>
+                <span>commercial@oceanmarque.com</span>
+              </div>
             </div>
             <div className="contact-detail">
-              <strong>Phone</strong>
-              <span>+91 44 4000 7000</span>
+              <Phone size={16} className="contact-detail-icon" />
+              <div>
+                <strong>Call our office</strong>
+                <span>+91 739 729 7771</span>
+              </div>
+            </div>
+            <div className="contact-detail" style={{ marginTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem' }}>
+              <div>
+                <strong>Key Contacts</strong>
+                <div style={{ fontSize: '0.9rem', opacity: 0.8, marginTop: '0.5rem' }}>
+                  <p style={{ margin: '0.2rem 0' }}>K.P. Singh — Director</p>
+                  <p style={{ margin: '0.2rem 0' }}>Shikha Sachdeva — Operations</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <div className="contact-form-card">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="contact-form" noValidate>
@@ -97,18 +122,18 @@ const ContactForm = () => {
               </div>
               <div className={`form-group ${errors.message ? 'has-error' : ''}`}>
                 <label htmlFor="cf-message">Message</label>
-                <textarea id="cf-message" name="message" value={form.message} onChange={handleChange} placeholder="Describe your shipment requirements..." rows={5} />
+                <textarea id="cf-message" name="message" value={form.message} onChange={handleChange} placeholder="Describe your shipment requirements or enquiry..." rows={5} />
                 {errors.message && <span className="field-error">{errors.message}</span>}
               </div>
               <button type="submit" className="btn btn-primary submit-btn">
-                <Send size={18} /> Request a Quote
+                <Send size={18} /> Send Message
               </button>
             </form>
           ) : (
             <div className="success-state">
               <CheckCircle size={56} color="#0077B6" />
               <h3>Thank You, {form.name}!</h3>
-              <p>We've received your inquiry for <strong>{form.service}</strong>. Our team will reach out to you at <strong>{form.email}</strong> within 24 hours.</p>
+              <p>We've received your message regarding <strong>{form.service}</strong>. Our team will contact you at <strong>{form.email}</strong> within 24 hours.</p>
             </div>
           )}
         </div>

@@ -1,0 +1,91 @@
+.exim-section {
+  padding: 8rem 0;
+  background: var(--white);
+}
+
+.exim-layer {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.exim-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.exim-item {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.exim-icon-sm {
+  flex-shrink: 0;
+  color: var(--ocean);
+  margin-top: 0.2rem;
+}
+
+.exim-text h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.exim-text p {
+  font-size: 0.92rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.exim-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--navy) 0%, #001D3D 100%);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+
+.exim-stat-box {
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.exim-stat-box:last-child {
+  border-bottom: none;
+}
+
+.exim-stat-num {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--ocean);
+  margin-bottom: 0.5rem;
+}
+
+.exim-stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .exim-layer {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .exim-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

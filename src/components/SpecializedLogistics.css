@@ -1,0 +1,84 @@
+.spec-section {
+  padding: 8rem 0;
+  background: #f8fbff;
+}
+
+.spec-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.spec-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 3rem;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 119, 182, 0.05);
+  border: 1px solid rgba(0, 119, 182, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 119, 182, 0.12);
+}
+
+.spec-icon-box {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 119, 182, 0.05);
+  color: var(--ocean);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.spec-content {
+  flex: 1;
+}
+
+.spec-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.spec-card-desc {
+  font-size: 1.05rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.spec-tags {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.spec-tag-item {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ocean);
+  background: rgba(0, 119, 182, 0.08);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .spec-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}

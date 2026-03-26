@@ -8,12 +8,12 @@ import './WhyChooseUs.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const reasons = [
-  { icon: <Globe size={30} />, title: 'Global Reach', desc: 'A presence in 60+ countries means your cargo is never out of reach.' },
-  { icon: <Shield size={30} />, title: 'Reliability', desc: 'Industry-leading on-time delivery rates backed by 25+ years of expertise.' },
-  { icon: <Zap size={30} />, title: 'Fast Clearance', desc: 'Pre-clearance and priority customs lanes slash dwell time significantly.' },
-  { icon: <Star size={30} />, title: 'Excellence', desc: 'Certified ISO standards and award-winning service quality.' },
-  { icon: <Clock size={30} />, title: '24/7 Support', desc: 'Round-the-clock operations teams and dedicated account managers.' },
-  { icon: <Users size={30} />, title: 'Expertise', desc: '500+ logistics professionals across ports, customs, and trade lanes.' },
+  { icon: <Globe size={30} />, title: 'Global Reach', desc: 'A strategic presence across 100+ countries ensuring your cargo is never out of reach.' },
+  { icon: <Shield size={30} />, title: 'Reliability', desc: 'Industry-leading on-time delivery rates backed by 25+ years of operational excellence.' },
+  { icon: <Zap size={30} />, title: 'Fast Clearance', desc: 'Pre-clearance and priority customs lanes to significantly reduce dwell time.' },
+  { icon: <Star size={30} />, title: 'Excellence', desc: 'Certified ISO standards and consistent award-winning service quality.' },
+  { icon: <Clock size={30} />, title: '24/7 Support', desc: 'Round-the-clock operations and dedicated account managers for seamless updates.' },
+  { icon: <Users size={30} />, title: 'Expertise', desc: 'A team of seasoned professionals with 100+ years of combined logistics experience.' },
 ];
 
 const WhyChooseUs = () => {

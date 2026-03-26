@@ -8,11 +8,11 @@ import './HowItWorks.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
-  { icon: <MessageCircle size={36} />, num: '01', title: 'Inquiry', desc: 'Submit your shipment requirements. Our team gets back within 4 hours.' },
-  { icon: <LayoutList size={36} />, num: '02', title: 'Planning', desc: 'We design a tailored, cost-effective routing and logistics plan for you.' },
-  { icon: <Truck size={36} />, num: '03', title: 'Shipping', desc: 'Cargo is dispatched with full tracking and carrier coordination.' },
-  { icon: <ClipboardCheck size={36} />, num: '04', title: 'Customs', desc: 'Our experts manage all customs documentation and compliance.' },
-  { icon: <PackageCheck size={36} />, num: '05', title: 'Delivery', desc: 'Safe, on-time delivery with proof and post-delivery support.' },
+  { icon: <MessageCircle size={36} />, num: '01', title: 'Requirement Analysis', desc: 'In-depth evaluation of your cargo, timeline, and budget for tailored planning.' },
+  { icon: <LayoutList size={36} />, num: '02', title: 'Route & Mode Optimization', desc: 'Designing the most efficient multimodal path to minimize costs and transit time.' },
+  { icon: <ClipboardCheck size={36} />, num: '03', title: 'Documentation & Compliance', desc: 'Handling all customs, EXIM regulations, and legal documentation with precision.' },
+  { icon: <Truck size={36} />, num: '04', title: 'Cargo Handling & Movement', desc: 'Secure loading, transit, and monitoring using our global partner network.' },
+  { icon: <PackageCheck size={36} />, num: '05', title: 'Delivery & Tracking', desc: 'Final-mile delivery with real-time updates and seamless proof of delivery.' },
 ];
 
 const HowItWorks = () => {

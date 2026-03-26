@@ -23,7 +23,7 @@
   font-weight: 700;
   color: var(--navy);
   letter-spacing: -0.5px;
-  margin-bottom: 1rem;
+ 
 }
 
 .section-sub {
@@ -31,7 +31,7 @@
   color: var(--gray-text);
   max-width: 560px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.3;
 }
 
 /* ===== SERVICES ===== */
